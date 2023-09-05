@@ -6,16 +6,20 @@
 }
 
 body{
-    background-image: url("./assests/background gameover.png");
+    background-image: url("./assests/background-gameover.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    padding: 128px 450px;
+    /* border: 2px solid red; */
 }
 
 .all{
-    background-color: white;
+    background-color: lightgrey;
     border-radius: 10px;
-    position: relative;
-    top: 160px;
-    left: 260px;
+    /* position: relative;
+    top: 130px;
+    left: 50vh;
+    margin: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -34,4 +38,40 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Mobile-responsive styles */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        padding-left: 45px;
+        padding-top: 250px;
+        height: 100vh;
+    }
+
+    .all {
+        width: 90%;
+        font-size: 24px;
+        height: 350px;
+    }
+
+    .playAgain {
+        width: 100%;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .playAgain{
+        width: 200px;
+    }
+
+
+
 }

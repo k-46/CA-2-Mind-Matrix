@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url("./assests/background-image.jpg");
+    background-image: url("./assests/background-gameover.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -40,6 +40,11 @@ form,select{
     /* border: 2px solid red; */
 }
 
+#op{
+    /* border: 2px solid red; */
+    padding: 5px;
+}
+
 .login-items{
     width: 250px;
     height: 30px;
@@ -60,6 +65,7 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 #instructions{
@@ -67,10 +73,30 @@ input{
     color: rgba(0, 0, 0, 0.50);
     font-size: 20px;
     font-weight: 300;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
     padding-top: 12px;
 }
 
 .pointer{
     cursor:pointer;
+}
+
+
+
+@media (max-width: 480px) {
+    body {
+        height: 100vh;
+        align-items: center;        
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #login {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .login-items {
+        width: 250px;
+    }
 }
