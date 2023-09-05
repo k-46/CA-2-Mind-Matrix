@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-image: url("./assests/background-image.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Mate SC', serif;
+}
+
+#login{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 50vh;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin: 160px;
+}
+
+form,select{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.login-items{
+    width: 250px;
+    height: 30px;
+}
+
+input{
+    border-radius: 3px;
+    background: rgba(217, 217, 217, 0.44);
+    border: 0px;
+}
+
+#playButton{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    background: #4CB5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#instructions{
+    /* border: 2px solid; */
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration-line: underline;
+    padding-top: 12px;
+}
+
+.pointer{
+    cursor:pointer;
+}

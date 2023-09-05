@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
+}
+
+body{
+    background-color: #d5e0ff;
+    justify-content: space-between;
+    align-items: center;
+    gap: 400px;
+    padding: 100px 200px;
+    /* border: 2px solid red; */
+}
+
+.flex{
+    display: flex;
+}
+
+
+table{
+    background-color: white;
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid lightblue;
+}
+
+img{
+    height: 50px;        /* for stopwatch*/
+}
+
+.gameTable{             /*grid of the game*/
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid blue; */
+}
+
+.rest{
+    /* border: 2px solid red; */
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+}
+
+#numpad{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.erase-result{
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 30px;
+}
+
+.erase{
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    border-radius:5px;
+    width: 110px;
+    height: 30px;
+}
+
+.erase img{
+    height: 20px;
+    padding-right: 20px;
+}
+
+
+.clock{
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid; */
+    width: 150px;
+}
+
+.resultButton{
+    /* background-color: #84c1fe; */
+    border-radius: 5px;
+    background: rgba(5, 146, 253, 0.39);
+    height: 30px;
+    width: 110px;
+}

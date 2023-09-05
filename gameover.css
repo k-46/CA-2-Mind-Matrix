@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-image: url("./assests/background gameover.png");
+    background-size: cover;
+}
+
+.all{
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: 160px;
+    left: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 636px;
+    height: 448px;
+    font-size: 30px;
+}
+
+.playAgain{
+    height: 40px;
+    width: 295px;
+    border-radius: 10px;
+    background: #0C8CE9;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

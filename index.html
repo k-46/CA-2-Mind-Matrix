@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Matrix</title>
+    <link rel="icon" href="./assests/icon.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="login">
+        <h1 class="login-items">
+            MIND MATRIX
+        </h1>
+        <input class="login-items" required type="text" placeholder="your name" maxlength="25" id="userName">
+        <input type="text" class="login-items" placeholder="Nick name" maxlength="25" id="nickName">
+        <form action="" class="login-items" >
+            <label for="difficulty">DIFFICULTY</label>
+            <select name="difficulty" class="login-items pointer" id="op">
+                <option value="Easy" id="">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </form>
+        <div>
+            <p id="playButton" class="login-items pointer">
+            Play
+            </p>
+            <p class="login-items pointer" id="instructions">
+                Instructions
+            </p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
