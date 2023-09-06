@@ -81,6 +81,28 @@ input{
     cursor:pointer;
 }
 
+#instruction-box{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.88);
+    width: 100vw;
+    height: 100vh;
+    padding: 150px;
+    color: white;
+    font-size: larger;
+    display: none;
+}
+#instruction-box ul{
+    list-style-type:none;
+    /* block-size: 100px; */
+}
+
+.ins-x{
+    background-color: grey;
+    border-radius: 100px;
+    width: 200px;
+    position: relative;
+    left: 520px;
+}
 
 
 @media (max-width: 480px) {
@@ -98,5 +120,13 @@ input{
 
     .login-items {
         width: 250px;
+    }
+    #instruction-box{
+        border: 2px solid red;
+        padding: 80px;
+        font-size: medium;
+    }
+    .ins-x{
+        left: 10px;
     }
 }
