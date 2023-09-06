@@ -86,10 +86,10 @@ input{
     background-color: rgba(0, 0, 0, 0.88);
     width: 100vw;
     height: 100vh;
-    padding: 150px;
+    padding: 100px;
     color: white;
     font-size: larger;
-    display: none;
+    /* display: none; */
 }
 #instruction-box ul{
     list-style-type:none;
@@ -101,7 +101,7 @@ input{
     border-radius: 100px;
     width: 200px;
     position: relative;
-    left: 520px;
+    left: 560px;
 }
 
 
@@ -123,10 +123,10 @@ input{
     }
     #instruction-box{
         border: 2px solid red;
-        padding: 80px;
+        padding: 60px;
         font-size: medium;
     }
     .ins-x{
-        left: 10px;
+        left: 30px;
     }
 }
