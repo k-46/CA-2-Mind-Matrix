@@ -14,6 +14,7 @@ body{
     align-items: center;
     gap: 400px;
     padding: 100px 200px;
+    font-family: Arial, Helvetica, sans-serif;
     /* border: 2px solid red; */
 }
 
@@ -21,28 +22,52 @@ body{
     display: flex;
 }
 
-
-table{
-    background-color: white;
-    border: 2px solid blue;
-    border-collapse: collapse;
-}
-
-td{
-    border: 1px solid lightblue;
-}
-
 img{
     height: 50px;        /* for stopwatch*/
 }
 
 .gameTable{             /*grid of the game*/
-    width: 500px;
-    height: 500px;
-    /* border: 1px solid blue; */
+    width: 450px;
+    height: 450px;
+    /* border: 1px solid red; */
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.rest{
+
+.tile {
+    width: 50px; 
+    height: 50px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-line{
+    border-bottom: 1px solid black;
+}
+
+.vertical-line{
+    border-right: 1px solid black;
+}
+
+.tile-start {
+    background-color: rgba(173, 216, 230, 0.25);
+}
+
+.number-selected {
+    background-color: rgba(128, 128, 128, 0.641);
+}
+
+.rest{                      /* Everthing except the gameTable */
     /* border: 2px solid red; */
     justify-content: space-around;
     align-items: center;
@@ -54,17 +79,16 @@ img{
 .numpad{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap:1px;
     width: 250px;
     height: 300px;
     background-color: white;
-    border: 2px solid lightslategray;
+    border: 2px solid black;
 }
-.cell{
+.cell{          /*for the numbers in numberpad */
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid#d5e0ff;
+    border: 1px solid lightgray;
     width: 82px;
     cursor: pointer;
 }
@@ -79,19 +103,12 @@ img{
 .erase{
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    background-color: white;
+    /* background-color: white; */
     border-radius:5px;
     width: 110px;
     height: 30px;
     cursor: pointer;
 }
-
-.erase img{
-    height: 20px;
-    padding-right: 20px;
-}
-
 
 .clock{
     align-items: center;
@@ -104,21 +121,15 @@ img{
     height: 70px;
 }
 
-.resultButton{
+.result{
     /* background-color: #84c1fe; */
     border-radius: 5px;
     background-color: rgba(202, 152, 112, 0.721);
     height: 30px;
     width: 110px;
     color: white;
-
+    cursor: pointer;
 }
-
-
-
-
-
-/* Your existing CSS code here */
 
 /* Mobile-responsive styles */
 @media (max-width: 480px) {
@@ -147,16 +158,19 @@ img{
         order: 2;
         flex-direction: row;
     }
-    .erase{
-        flex-direction: row;
-    }
     .gameTable{
-        width: 100%;
-        height: 400px;
+        width: 342px;
+        height: 342px;
         margin-top: 60px;
     }
+
+    .tile{
+        width: 38px;
+        height: 38px;
+    }
+
     .rest{
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         justify-content: space-between;
         height: 200px;
     }

@@ -8,277 +8,14 @@
     <link rel="stylesheet" href="./game.css">
 </head>
 <body class="flex">
-    <!-- <div> -->
-        <table class="gameTable">
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                   8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    4
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    6
-                </td>
-                <td>
-                    7
-                </td>
-                <td>
-                    8
-                </td>
-                <td>
-                    9
-                </td>
-            </tr>
-        </table>
-    <!-- </div> -->
+    <div class="gameTable">
+    </div>
     <div class="rest flex">
         <div class="flex clock">
-            <img src="./assests/timer.png" alt=""><span>11</span>:<span>11</span>
+            <img src="./assests/timer.png" alt=""><span id="minutes">11</span>:<span id="seconds">11</span>
         </div>
         <div class="numpad">
-            <div class="cell">
+            <!-- <div class="cell">
                 1
             </div>
             <div class="cell">
@@ -304,16 +41,18 @@
             </div>
             <div class="cell">
                 9
-            </div>
+            </div> -->
         </div>
         <div class="flex erase-result">   <!--erase and result-->
-                <button class="erase flex">
-                   <img src="./assests/eraser.png" alt="" > Erase
+                <button class="erase flex" id=" ">
+                   Erase
                 </button>
-                <button class="resultButton">
+                <button class="result">
                     Result
                 </button>
         </div>
     </div>
+
+    <script src="./game.js"></script>
 </body>
 </html>
