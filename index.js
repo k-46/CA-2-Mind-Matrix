@@ -20,8 +20,8 @@ play.addEventListener("click",()=>{
     console.log(localStorage.getItem("username"));;
     console.log(localStorage.getItem("difficulty"));;
     console.log(localStorage.getItem("nickname"));;
-
-    // window.location.href="./game.html";
+    
+    window.location.href="./game.html";
     }
 });
 

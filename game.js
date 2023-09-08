@@ -4,7 +4,8 @@ const seconds = document.getElementById("seconds");
 const erase = document.querySelector(".erase");
 
 var numSelected = null;
-
+let emptyTile = 0;
+let score = 100;
 var board = [
     "--74916-5",
     "2---6-3-9",
@@ -17,27 +18,24 @@ var board = [
     "81--45---"
 ]
 
-var solution = [
-    "387491625",
-    "241568379",
-    "569327418",
-    "758619234",
-    "123784596",
-    "496253187",
-    "934176852",
-    "675832941",
-    "812945763"
-]
+// var solution = [
+//     "387491625",
+//     "241568379",
+//     "569327418",
+//     "758619234",
+//     "123784596",
+//     "496253187",
+//     "934176852",
+//     "675832941",
+//     "812945763"
+// ]
 
 window.onload = setGame();
 
 // erase button
 erase.addEventListener("click",selectNumber);
 
-// New game button 
-result.addEventListener("click",()=>{
-    window.location.href = "./gameover.html"
-});
+
 
 // Creating the board and numberpad
 function setGame() {
@@ -61,6 +59,8 @@ function setGame() {
             if (board[r][c] != "-") {
                 tile.innerText = board[r][c];
                 tile.classList.add("tile-start");
+            }else{
+                emptyTile++;
             }
             if (r == 2 || r == 5) {
                 tile.classList.add("horizontal-line");
@@ -106,8 +106,22 @@ function selectTile(){
 
 // Timer functionality
 
-let currentSecond = 0;
+
+let currentSecond = 59;
 let currentMinute = 0;
+
+// setting the timer according to the difficulty level
+let difficulty = localStorage.getItem("difficulty");
+
+if(difficulty=="Easy"){    
+    currentMinute = 5;
+}
+else if(difficulty=="Medium"){
+    currentMinute = 3;
+}
+else if(difficulty=="Hard"){
+    currentMinute = 1;
+}
 
 minutes.innerText=currentMinute;
 seconds.innerText=currentSecond;
@@ -115,12 +129,43 @@ seconds.innerText=currentSecond;
 setInterval(timer,1000);
 
 function timer(){
-    currentSecond++;
-    if(currentSecond%60==0){
-        currentMinute++;
-        currentSecond=0;
+    currentSecond--;
+    if(currentMinute==0 && currentSecond==0){
+        checkResults();
+
     }
+    if(currentSecond==0){
+        currentMinute--;
+        currentSecond=59;
+    }
+
     minutes.innerText=currentMinute;
     seconds.innerText=currentSecond;
 
+}
+
+// checking whether the user input is correct
+
+var solution = "387491625241568379569327418758619234123784596496253187934176852675832941812945763";
+
+result.addEventListener("click",()=>{
+    checkResults()    
+});
+
+
+function checkResults(){
+    let tiles = document.getElementsByClassName("tile");
+    // console.log(tiles)
+    filledTile = 0;
+    for(let i=0; i<81; i++){
+        
+        if(tiles[i].innerText==solution[i] && !(tiles[i].classList.contains("tile-start"))){
+            filledTile++;
+        }
+    }
+    let finalScore = (((filledTile/emptyTile)*100)).toFixed(2);
+    console.log(finalScore);
+    localStorage.setItem("userScore",finalScore)
+    // console.log(localStorage.getItem("userScore"))
+    window.location.href = "./gameover.html"
 }
