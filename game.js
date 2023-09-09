@@ -2,6 +2,7 @@ const result = document.querySelector(".result");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 const erase = document.querySelector(".erase");
+const audio = new Audio("./assests/music.mp3");
 
 var numSelected = null;
 let emptyTile = 0;
@@ -55,7 +56,6 @@ function setGame() {
     for (let r = 0; r < 9; r++) {
         for (let c = 0; c < 9; c++) {
             let tile = document.createElement("div");
-            tile.id = r.toString() + "-" + c.toString();
             if (board[r][c] != "-") {
                 tile.innerText = board[r][c];
                 tile.classList.add("tile-start");
@@ -73,6 +73,9 @@ function setGame() {
             document.querySelector(".gameTable").append(tile);
         }
     }
+    // Background Music
+    audio.play();
+    audio.loop = true;
 }
 
 // separates which number or erase is selected
